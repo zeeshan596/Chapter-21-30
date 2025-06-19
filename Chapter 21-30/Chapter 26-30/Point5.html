@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coin Toss</title>
+</head>
+<style>
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+
+<body>
+    <h2>Coin Toss</h2>
+
+    <button onclick="tossCoin()">Toss the Coin</button>
+
+    <h3 id="result">--</h3>
+
+    <script>
+        function tossCoin() {
+            let randomNumber = Math.random();
+            let coinResult = randomNumber < 0.5 ? "Heads" : "Tails";
+            document.getElementById("result").textContent = (`Random coin value: ${coinResult}`);
+        }
+    </script>
+</body>
+
+</html>
